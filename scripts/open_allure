@@ -1,0 +1,12 @@
+#!/bin/sh
+
+link="$1"
+title="$2"
+
+rm -rf /tmp/
+mkdir tmp
+
+curl -o ./allure.zip "$link"
+
+unzip allure.zip -d tmp
+allure serve ./tmp
